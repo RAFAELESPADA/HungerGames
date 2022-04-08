@@ -27,6 +27,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.RegisteredServiceProvider;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.plugin.messaging.PluginMessageListener;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.scheduler.BukkitScheduler;
 
@@ -124,7 +125,7 @@ import net.luckperms.api.LuckPerms;
 import net.luckperms.api.LuckPermsProvider;
 import net.luckperms.api.model.user.User;
 
-public class Main extends JavaPlugin implements Listener {
+public class Main extends JavaPlugin implements Listener ,PluginMessageListener {
 	public static Plugin instance;
 	public static Main main;
 	public static Iniciando GAMESTATE;
@@ -178,7 +179,8 @@ public class Main extends JavaPlugin implements Listener {
 	@SuppressWarnings("unused")
 	public void onEnable() {
 		plugin = this;
-
+		Bukkit.getMessenger().registerIncomingPluginChannel(this, "BungeeCord", this);
+		Bukkit.getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
 		getLogger().info(" ");
 		getLogger().info(" ");
 
@@ -545,6 +547,12 @@ public class Main extends JavaPlugin implements Listener {
 		String prefix = user.getCachedData().getMetaData().getPrefix().replace("&", "§");
 	    String spawnLocation = prefix;
 	    return spawnLocation;
+	}
+
+	@Override
+	public void onPluginMessageReceived(String arg0, Player arg1, byte[] arg2) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

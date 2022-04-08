@@ -1,0 +1,34 @@
+name: HG
+author: zEnderX5_ , Rafael Auler
+version: 1.0
+main: me.VideoSRC.Main
+api-version: 1.14
+commands:
+  start:
+  kits:
+  kit:
+  help:
+  admin:
+  toggle:
+  ip:
+  s:
+  help:
+  game:
+  feast:
+  pvp:
+  togglekit:
+  forcefeast:
+  tp:
+  specs:
+  tpall:
+  invencibility:
+  hgtime:
+  pregame:
+  tell:
+  ir:
+  inv:
+  arena:
+  watch:
+  damage:
+  skit:
+  

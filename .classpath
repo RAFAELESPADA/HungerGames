@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/SO Auler/Desktop/NETWORK FOR DOWNLOAD LOGIN LOBBY KITPVP SKYWARS SURVIVAL  HUNGERGAMES/HG/spigot.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/SO Auler/Desktop/NETWORK FOR DOWNLOAD LOGIN LOBBY KITPVP SKYWARS SURVIVAL  HUNGERGAMES/HG/plugins/LuckPerms-Bukkit-5.3.47.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/SO Auler/Desktop/NETWORK FOR DOWNLOAD LOGIN LOBBY KITPVP SKYWARS SURVIVAL  HUNGERGAMES/HG/plugins/TTA-5.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

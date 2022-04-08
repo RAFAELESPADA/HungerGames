@@ -38,7 +38,7 @@ public class Manager {
 		bookMeta.setAuthor("zEnderX5_");
 		List<String> pages = new ArrayList<String>();
 		pages.add("HG is a battle royale mode with habilities!\nWhere you will need to fight to be the last player alive\nYou can do soups with the following items"); // Page 1
-		pages.add("Mushrooms, Cacau, Cactus, SeaGrass, Dandelions and Poppys\nApples, LilyPads, Wheat Seeds\nBeetroot seeds and Carrots");
+		pages.add("Mushrooms, Cocoa Beans, Cactus, SeaGrass, Dandelions and Poppys\nApples, LilyPads, Wheat Seeds\nBeetroot seeds and Carrots");
 		bookMeta.setPages(pages);
 		writtenBook.setItemMeta(bookMeta);
 		p.openBook(writtenBook);
@@ -50,7 +50,7 @@ public class Manager {
 
 		ItemStack kits = new ItemStack(Material.COMPASS);
 		ItemMeta mkits = kits.getItemMeta();
-		mkits.setDisplayName("§cBussola");
+		mkits.setDisplayName("§cCompass");
 		kits.setItemMeta(mkits);
 
 		p.getInventory().setItem(0, kits);
@@ -62,7 +62,7 @@ public class Manager {
 
 		ItemStack balde = new ItemStack(Material.WATER_BUCKET);
 		ItemMeta mbalde = balde.getItemMeta();
-		mbalde.setDisplayName("§b§lVOCE VENCEU!");
+		mbalde.setDisplayName("§b§lYou win!");
 		balde.setItemMeta(mbalde);
 
 		p.getInventory().setItem(4, balde);

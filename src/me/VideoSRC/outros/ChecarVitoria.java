@@ -111,7 +111,7 @@ public class ChecarVitoria implements Listener {
 			if (p.hasPermission("tag.ajudante")) {
 				return;
 			}
-			p.sendMessage("§cATENCAO§7, Fale mais devagar!");
+			p.sendMessage("§cSPAM §7Please Do not spam!");
 			e.setCancelled(true);
 			return;
 		}
@@ -150,7 +150,7 @@ public class ChecarVitoria implements Listener {
 			bookMeta.setAuthor("zEnderX5_");
 			List<String> pages = new ArrayList<String>();
 			pages.add("HG is a battle royale mode with habilities!\nWhere you will need to fight to be the last player alive\nYou can do soups with the following items"); // Page 1
-			pages.add("Mushrooms, Cacau, Cactus, SeaGrass, Dandelions and Poppys\nApples, LilyPads, Wheat Seeds\nBeetroot seeds and Carrots");
+			pages.add("Mushrooms, Cocoa, Cactus, SeaGrass, Dandelions and Poppys\nApples, LilyPads, Wheat Seeds\nBeetroot seeds and Carrots");
 			bookMeta.setPages(pages);
 			writtenBook.setItemMeta(bookMeta);
 			p.openBook(writtenBook);
@@ -330,7 +330,7 @@ public class ChecarVitoria implements Listener {
 				}
 				String parabens = "Parabens";
 				canvas.drawText(38, 6, MinecraftFont.Font, parabens + ",");
-				canvas.drawText(-5, 15, MinecraftFont.Font, " Voce venceu!");
+				canvas.drawText(-5, 15, MinecraftFont.Font, " You win!");
 				canvas.drawText(i, 24, MinecraftFont.Font, p.getName());
 			}
 		});
@@ -477,8 +477,13 @@ public class ChecarVitoria implements Listener {
 									}
 								}
 							}, 250L);
-							Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "restart");
 						}
+						Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable() {
+							public void run() {
+								Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "restart");
+									}
+						}, 500L);
+				
 					} else if (Main.Jogadores.size() == 0) {
 						Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "restart");
 					}

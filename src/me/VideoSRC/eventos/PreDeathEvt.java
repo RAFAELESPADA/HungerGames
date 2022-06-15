@@ -84,16 +84,7 @@ public class PreDeathEvt implements Listener {
 			p.setGameMode(GameMode.SURVIVAL);
 			p.getInventory().clear();
 			Manager.darBussola(p);
-		} else if ((p.hasPermission("tag.vip")) && (Main.Andamento >= 300)) {
-			Main.Watch.add(p.getName());
-			Main.Jogadores.remove(p.getName());
-			Habilidade.removeAbility(p);
-			ChecarVitoria.verificaWin();
-			Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable() {
-				public void run() {
-					p.getInventory().clear();
-				}
-			}, 5L);
+		
 		} else if ((Main.Andamento >= 300) && (p.hasPermission("tag.vip"))) {
 			Main.Watch.add(p.getName());
 			EspectadoresManager.DamageMobs.add(p);
@@ -130,6 +121,12 @@ public class PreDeathEvt implements Listener {
 			Main.mortos.add(p.getName());
 			Main.Jogadores.remove(p.getName());
 			ChecarVitoria.verificaWin();
+			Bukkit.getScheduler().scheduleSyncDelayedTask(Main.instance, new Runnable() {
+				public void run() {
+					p.kickPlayer("You died and gets kicked! Rejoin later");
+				}
+			}, 80L);
+				
 		}
 	}
 }
